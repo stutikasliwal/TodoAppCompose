@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: Macos-latest
+    steps: 
+    
+      - uses: actions/checkout@v2
+      
+      - name: Run a oneline script
+        run: echo Hello, World!
+
+      - name: Run a multiline script
+        run: |
+          echo Add other actions to build, 
+          test and deploy your project
+      
