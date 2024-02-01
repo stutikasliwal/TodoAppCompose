@@ -1,7 +1,12 @@
 name: Android Build
 
 #what action has to be done in response to this script
-on: pull_request
+on:
+  push:
+    branches:
+      - main
+
+  workflow_dispatch:
 
 #Job is environment specification and set of tasks
 jobs:
