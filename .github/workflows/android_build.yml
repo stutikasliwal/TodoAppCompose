@@ -1,23 +1,25 @@
-name: Android Build
+name: CI
 
-#what action has to be done in response to this script
 on:
   push:
-    branches:
+    branches: 
     - main
 
   workflow_dispatch:
 
-#Job is environment specification and set of tasks
 jobs:
   build:
-   runs-on: macos-latest
-    
-   steps:
-    - uses: actions-checkout@v2
+    runs-on: macos-latest
+    steps: 
+     
+      - uses: actions/checkout@v2
+      
+      - name: Run a oneline script
+        run: echo Hello, World!
 
-    - name: Run a oneline script
-      run: echo Hello, World!
-        
-   
+      - name: Run a multiline script
+        run:
+          echo Add other actions to build, 
+          test and deploy your project
+      
 
