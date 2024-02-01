@@ -17,5 +17,8 @@ jobs:
       - name: Run a oneline script
         run: echo Hello, World!
 
+      - name: Build Project
+        run: ./gradlew assembleDebug
+
       
 
